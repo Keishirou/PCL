@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named pcd_write_test
+# Target rules for targets named pcd_binaryToASCII
 
 # Build rule for target.
-pcd_write_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pcd_write_test
-.PHONY : pcd_write_test
+pcd_binaryToASCII: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcd_binaryToASCII
+.PHONY : pcd_binaryToASCII
 
 # fast build rule for target.
-pcd_write_test/fast:
-	$(MAKE) -f CMakeFiles/pcd_write_test.dir/build.make CMakeFiles/pcd_write_test.dir/build
-.PHONY : pcd_write_test/fast
+pcd_binaryToASCII/fast:
+	$(MAKE) -f CMakeFiles/pcd_binaryToASCII.dir/build.make CMakeFiles/pcd_binaryToASCII.dir/build
+.PHONY : pcd_binaryToASCII/fast
 
-pcd_write.o: pcd_write.cpp.o
+pcd_binaryToASCII.o: pcd_binaryToASCII.cpp.o
 
-.PHONY : pcd_write.o
+.PHONY : pcd_binaryToASCII.o
 
 # target to build an object file
-pcd_write.cpp.o:
-	$(MAKE) -f CMakeFiles/pcd_write_test.dir/build.make CMakeFiles/pcd_write_test.dir/pcd_write.cpp.o
-.PHONY : pcd_write.cpp.o
+pcd_binaryToASCII.cpp.o:
+	$(MAKE) -f CMakeFiles/pcd_binaryToASCII.dir/build.make CMakeFiles/pcd_binaryToASCII.dir/pcd_binaryToASCII.cpp.o
+.PHONY : pcd_binaryToASCII.cpp.o
 
-pcd_write.i: pcd_write.cpp.i
+pcd_binaryToASCII.i: pcd_binaryToASCII.cpp.i
 
-.PHONY : pcd_write.i
+.PHONY : pcd_binaryToASCII.i
 
 # target to preprocess a source file
-pcd_write.cpp.i:
-	$(MAKE) -f CMakeFiles/pcd_write_test.dir/build.make CMakeFiles/pcd_write_test.dir/pcd_write.cpp.i
-.PHONY : pcd_write.cpp.i
+pcd_binaryToASCII.cpp.i:
+	$(MAKE) -f CMakeFiles/pcd_binaryToASCII.dir/build.make CMakeFiles/pcd_binaryToASCII.dir/pcd_binaryToASCII.cpp.i
+.PHONY : pcd_binaryToASCII.cpp.i
 
-pcd_write.s: pcd_write.cpp.s
+pcd_binaryToASCII.s: pcd_binaryToASCII.cpp.s
 
-.PHONY : pcd_write.s
+.PHONY : pcd_binaryToASCII.s
 
 # target to generate assembly for a file
-pcd_write.cpp.s:
-	$(MAKE) -f CMakeFiles/pcd_write_test.dir/build.make CMakeFiles/pcd_write_test.dir/pcd_write.cpp.s
-.PHONY : pcd_write.cpp.s
+pcd_binaryToASCII.cpp.s:
+	$(MAKE) -f CMakeFiles/pcd_binaryToASCII.dir/build.make CMakeFiles/pcd_binaryToASCII.dir/pcd_binaryToASCII.cpp.s
+.PHONY : pcd_binaryToASCII.cpp.s
 
 # Help Target
 help:
@@ -158,10 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... pcd_write_test"
-	@echo "... pcd_write.o"
-	@echo "... pcd_write.i"
-	@echo "... pcd_write.s"
+	@echo "... pcd_binaryToASCII"
+	@echo "... pcd_binaryToASCII.o"
+	@echo "... pcd_binaryToASCII.i"
+	@echo "... pcd_binaryToASCII.s"
 .PHONY : help
 
 

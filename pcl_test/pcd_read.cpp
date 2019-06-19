@@ -27,7 +27,8 @@ int main()
 
 	// 作成したPointCloudを読み込む
 	// pcl::io::loadPCDFile("p_cloud_ascii.pcd", *p_cloud);
-	pcl::io::loadPCDFile("test_pcd.pcd", *p_cloud);
+	//pcl::io::loadPCDFile("test_pcd.pcd", *p_cloud); 
+	pcl::io::loadPCDFile("bin_Laser-00147_-00849.pcd", *p_cloud);
 
     std::cout << "Loaded "
             << p_cloud->width * p_cloud->height

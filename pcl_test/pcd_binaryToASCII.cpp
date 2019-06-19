@@ -1,4 +1,5 @@
 #include <iostream>
+#include<string.h>
 #include <pcl/io/pcd_io.h>
 #include <pcl/point_types.h>
 #include <pcl/visualization/cloud_viewer.h>
@@ -22,26 +23,29 @@ void viewerPsycho(pcl::visualization::PCLVisualizer& viewer)
 }
 
 
-int main()
+int main(int argc, char *argv[])
 {
 	pcl::PointCloud<pcl::PointXYZRGB>::Ptr p_cloud(new pcl::PointCloud<pcl::PointXYZRGB>);
 
 	// 作成したPointCloudを読み込む
 	// pcl::io::loadPCDFile("p_cloud_ascii.pcd", *p_cloud);
 	//pcl::io::loadPCDFile("test_pcd.pcd", *p_cloud); 
-	pcl::io::loadPCDFile("bin_Laser-00147_-00849.pcd", *p_cloud);
+	//pcl::io::loadPCDFile("bin_Laser-00147_-00849.pcd", *p_cloud);
+  pcl::io::loadPCDFile(argv[1], *p_cloud);
 
     std::cout << "Loaded "
             << p_cloud->width * p_cloud->height
-            << " data points from test_pcd.pcd with the following fields: "
+            << " data points from "<< argv[1] <<"with the following fields: "
             << std::endl;
-  for (size_t i = 0; i < p_cloud->points.size (); ++i)
+  /*for (size_t i = 0; i < p_cloud->points.size (); ++i)
     std::cout << "    " << p_cloud->points[i].x
               << " "    << p_cloud->points[i].y
-<< " " << p_cloud->points[i].z << std::endl;
+<< " " << p_cloud->points[i].z << std::endl; */
 
+  //std::cout << argv[3] << std::endl;
     //PCLの出力
-    //pcl::PointCloud<pcl::PointXYZRGB> cloud;
+    if(strcmp(argv[3],"0") == 0){
+      //pcl::PointCloud<pcl::PointXYZRGB> cloud;
     pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZRGB>);
 
     // Fill in the cloud data
@@ -58,9 +62,34 @@ int main()
     cloud->points[i].g = p_cloud->points[i].g;
     cloud->points[i].b = p_cloud->points[i].b;
   }
-  pcl::io::savePCDFileASCII ("test_ASCII_pcd.pcd", *cloud);
+  //pcl::io::savePCDFileASCII ("test_ASCII_pcd.pcd", *cloud);
+  pcl::io::savePCDFileASCII (argv[2], *cloud);
   
-  std::cerr << "Saved " << cloud->points.size () << " data points to test_ASCII_pcd.pcd." << std::endl;
+  std::cerr << "Saved " << cloud->points.size () << " data points XYZRGB to" << argv[2] << std::endl;
+
+    }else if(strcmp(argv[3],"1") == 0){
+      //pcl::PointCloud<pcl::PointXYZRGB> cloud;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
+
+    // Fill in the cloud data
+  cloud->width    = p_cloud->width;
+  cloud->height   = p_cloud->height;
+  cloud->is_dense = p_cloud->is_dense;
+  cloud->points.resize (p_cloud->width * p_cloud->height);
+
+  for (size_t i = 0; i < p_cloud->points.size (); ++i){
+    cloud->points[i].x = p_cloud->points[i].x;
+    cloud->points[i].y = p_cloud->points[i].y;
+    cloud->points[i].z = p_cloud->points[i].z;
+  }
+
+  //pcl::io::savePCDFileASCII ("test_ASCII_pcd.pcd", *cloud);
+  pcl::io::savePCDFileASCII (argv[2], *cloud);
+  
+  std::cerr << "Saved " << cloud->points.size () << " data points XYZ to" << argv[2] << std::endl;
+    }
+    
+  
 	// ビューワーの作成
 	pcl::visualization::CloudViewer viewer("PointCloudViewer");
 	viewer.showCloud(p_cloud);

@@ -60,39 +60,39 @@ CMAKE_SOURCE_DIR = /home/kei/pcl_test
 CMAKE_BINARY_DIR = /home/kei/pcl_test/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/pcd_write_test.dir
+# Target rules for target CMakeFiles/pcd_binaryToASCII.dir
 
 # All Build rule for target.
-CMakeFiles/pcd_write_test.dir/all:
-	$(MAKE) -f CMakeFiles/pcd_write_test.dir/build.make CMakeFiles/pcd_write_test.dir/depend
-	$(MAKE) -f CMakeFiles/pcd_write_test.dir/build.make CMakeFiles/pcd_write_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kei/pcl_test/build/CMakeFiles --progress-num=1,2 "Built target pcd_write_test"
-.PHONY : CMakeFiles/pcd_write_test.dir/all
+CMakeFiles/pcd_binaryToASCII.dir/all:
+	$(MAKE) -f CMakeFiles/pcd_binaryToASCII.dir/build.make CMakeFiles/pcd_binaryToASCII.dir/depend
+	$(MAKE) -f CMakeFiles/pcd_binaryToASCII.dir/build.make CMakeFiles/pcd_binaryToASCII.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kei/pcl_test/build/CMakeFiles --progress-num=1,2 "Built target pcd_binaryToASCII"
+.PHONY : CMakeFiles/pcd_binaryToASCII.dir/all
 
 # Include target in all.
-all: CMakeFiles/pcd_write_test.dir/all
+all: CMakeFiles/pcd_binaryToASCII.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/pcd_write_test.dir/rule: cmake_check_build_system
+CMakeFiles/pcd_binaryToASCII.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kei/pcl_test/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pcd_write_test.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pcd_binaryToASCII.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kei/pcl_test/build/CMakeFiles 0
-.PHONY : CMakeFiles/pcd_write_test.dir/rule
+.PHONY : CMakeFiles/pcd_binaryToASCII.dir/rule
 
 # Convenience name for target.
-pcd_write_test: CMakeFiles/pcd_write_test.dir/rule
+pcd_binaryToASCII: CMakeFiles/pcd_binaryToASCII.dir/rule
 
-.PHONY : pcd_write_test
-
-# clean rule for target.
-CMakeFiles/pcd_write_test.dir/clean:
-	$(MAKE) -f CMakeFiles/pcd_write_test.dir/build.make CMakeFiles/pcd_write_test.dir/clean
-.PHONY : CMakeFiles/pcd_write_test.dir/clean
+.PHONY : pcd_binaryToASCII
 
 # clean rule for target.
-clean: CMakeFiles/pcd_write_test.dir/clean
+CMakeFiles/pcd_binaryToASCII.dir/clean:
+	$(MAKE) -f CMakeFiles/pcd_binaryToASCII.dir/build.make CMakeFiles/pcd_binaryToASCII.dir/clean
+.PHONY : CMakeFiles/pcd_binaryToASCII.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/pcd_binaryToASCII.dir/clean
 
 .PHONY : clean
 
