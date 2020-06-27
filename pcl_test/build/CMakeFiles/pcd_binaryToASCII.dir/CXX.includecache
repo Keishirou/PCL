@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/kei/pcl_test/pcd_binaryToASCII.cpp
+/home/kei/Git/PCL/pcl_test/pcd_binaryToASCII.cpp
 iostream
 -
 string.h
