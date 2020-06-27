@@ -29,9 +29,6 @@ int main(int argc, char *argv[])
     cloud->points[i].x = p_cloud->points[i].x;
     cloud->points[i].y = p_cloud->points[i].y;
     cloud->points[i].z = p_cloud->points[i].z;
-    cloud->points[i].r = (uint32_t)p_cloud->points[i].r;
-    cloud->points[i].g = (uint32_t)p_cloud->points[i].g;
-    cloud->points[i].b = (uint32_t)p_cloud->points[i].b;
     r = p_cloud->points[i].r;
     g = p_cloud->points[i].g;
     b = p_cloud->points[i].b;
