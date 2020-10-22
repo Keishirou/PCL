@@ -34,7 +34,8 @@ int main(int argc, char *argv[])
     b = p_cloud->points[i].b;
     cloud->points[i].rgb =  (r << 16) | (g << 8) |b;
   }
-  pcl::io::savePCDFileASCII (argv[2], *cloud);
+  //pcl::io::savePCDFileASCII (argv[2], *cloud);
+  pcl::io::savePCDFileBinary (argv[2], *cloud);
   
   std::cerr << "Saved " << cloud->points.size () << " data points XYZRGB to " << argv[2] << std::endl;
 
